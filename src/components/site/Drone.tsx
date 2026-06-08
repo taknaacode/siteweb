@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import droneImg from "@/assets/stealth-drone.jpg";
+import droneImg from "@/assets/stealth-drone.png";
 
 export function Drone() {
   return (
