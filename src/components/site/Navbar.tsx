@@ -1,16 +1,19 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 const links = [
-  { href: "#solutions", label: "Solutions" },
-  { href: "#industries", label: "Industries" },
-  { href: "#technology", label: "Technology" },
-  { href: "#about", label: "About" },
-  { href: "#contact", label: "Contact" },
+  { href: "#solutions", key: "navbar.solutions" },
+  { href: "#industries", key: "navbar.industries" },
+  { href: "#technology", key: "navbar.technology" },
+  { href: "#about", key: "navbar.about" },
+  { href: "#contact", key: "navbar.contact" },
 ];
 
 export function Navbar() {
+  const { t } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -29,7 +32,7 @@ export function Navbar() {
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <a href="#top" className="flex items-center gap-3">
-          <Logo className="h-10 w-auto" />
+          <Logo className="h-16 w-auto" />
           <span className="hidden text-sm font-semibold tracking-widest text-foreground sm:block">
             TAKNAACODE
           </span>
@@ -42,23 +45,27 @@ export function Navbar() {
                 href={l.href}
                 className="text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
-                {l.label}
+                {t(l.key)}
               </a>
             </li>
           ))}
         </ul>
 
-        <a
-          href="#contact"
-          className="hidden rounded-md bg-teal px-4 py-2 text-sm font-medium text-primary-foreground transition-all hover:opacity-90 hover:teal-glow md:inline-block"
-        >
-          Request Demo
-        </a>
+        <div className="hidden items-center gap-3 md:flex">
+          <LanguageSwitcher />
+
+          <a
+            href="#contact"
+            className="rounded-md bg-teal px-4 py-2 text-sm font-medium text-primary-foreground transition-all hover:opacity-90 hover:teal-glow"
+          >
+            {t("navbar.requestDemo")}
+          </a>
+        </div>
 
         <button
           onClick={() => setOpen((v) => !v)}
           className="md:hidden text-foreground"
-          aria-label="Toggle menu"
+          aria-label={t("navbar.toggleMenu")}
         >
           {open ? <X /> : <Menu />}
         </button>
@@ -74,17 +81,24 @@ export function Navbar() {
                   onClick={() => setOpen(false)}
                   className="text-foreground text-base"
                 >
-                  {l.label}
+                  {t(l.key)}
                 </a>
               </li>
             ))}
-            <a
-              href="#contact"
-              onClick={() => setOpen(false)}
-              className="mt-2 inline-block rounded-md bg-teal px-4 py-2 text-center text-sm font-medium text-primary-foreground"
-            >
-              Request Demo
-            </a>
+
+            <li>
+              <LanguageSwitcher />
+            </li>
+
+            <li>
+              <a
+                href="#contact"
+                onClick={() => setOpen(false)}
+                className="mt-2 inline-block rounded-md bg-teal px-4 py-2 text-center text-sm font-medium text-primary-foreground"
+              >
+                {t("navbar.requestDemo")}
+              </a>
+            </li>
           </ul>
         </div>
       )}

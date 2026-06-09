@@ -1,49 +1,52 @@
+import { useTranslation, Trans } from "react-i18next";
+import {
+  ArrowUpRight,
+  Plane,
+  ShieldAlert,
+  MonitorCog,
+} from "lucide-react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Plane, Flame, Wind, ShieldAlert, MonitorCog } from "lucide-react";
 import { SectionHeader } from "./Section";
 
 const items = [
   {
     icon: Plane,
-    title: "AI Surveillance Drone",
-    desc: "Autonomous patrol routes with onboard AI vision, anomaly detection, and real-time alerts streamed to your command center.",
-  },
-  {
-    icon: Flame,
-    title: "Fire & Smoke Detection Drone",
-    desc: "Thermal imaging and multispectral sensors detect ignition events early and trigger automated response protocols.",
-  },
-  {
-    icon: Wind,
-    title: "Gas Leak Detection Drone",
-    desc: "Industrial-grade gas sensing with predictive analytics for methane, H₂S, and VOCs across refineries and pipelines.",
+    titleKey: "solutions.items.drone.title",
+    descKey: "solutions.items.drone.desc",
   },
   {
     icon: ShieldAlert,
-    title: "Intrusion Detection Drone",
-    desc: "Human and vehicle classification with perimeter tracking, low-light operation, and silent pursuit modes.",
+    titleKey: "solutions.items.intrusion.title",
+    descKey: "solutions.items.intrusion.desc",
   },
   {
     icon: MonitorCog,
-    title: "Integrated Command Center",
-    desc: "Single pane of glass for fleet management, live telemetry, mission planning, and forensic analytics.",
+    titleKey: "solutions.items.commandCenter.title",
+    descKey: "solutions.items.commandCenter.desc",
   },
 ];
 
 export function Solutions() {
+  const { t } = useTranslation();
+
   return (
     <section id="solutions" className="relative py-28">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeader
-          eyebrow="Our Solutions"
-          title={<>Engineered for <span className="text-teal">mission-critical</span> operations</>}
-          description="A complete autonomous monitoring stack — from airborne sensors to operator dashboards — built for environments where downtime is not an option."
+          eyebrow={t("solutions.eyebrow")}
+          title={
+            <Trans
+              i18nKey="solutions.title"
+              components={{ teal: <span className="text-teal" /> }}
+            />
+          }
+          description={t("solutions.description")}
         />
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {items.map((it, i) => (
             <motion.article
-              key={it.title}
+              key={it.titleKey}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
@@ -54,14 +57,16 @@ export function Solutions() {
               <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-lg border border-teal/40 bg-teal/10 text-teal">
                 <it.icon className="h-6 w-6" />
               </div>
-              <h3 className="mb-2 text-xl font-semibold text-foreground">{it.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed flex-1">{it.desc}</p>
-              <a
-                href="#contact"
-                className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-teal transition-all group-hover:gap-2.5"
-              >
-                Learn More <ArrowUpRight className="h-4 w-4" />
-              </a>
+
+              <h3 className="mb-2 text-xl font-semibold text-foreground">
+                {t(it.titleKey)}
+              </h3>
+
+              <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+                {t(it.descKey)}
+              </p>
+
+              
             </motion.article>
           ))}
         </div>

@@ -1,6 +1,10 @@
-const logoAsset = "/assets/taknaacode-logo.png";
+import logoAsset from "../../assets/taknaacode-logo.png";
 
-export function Logo({ className = "h-10 w-auto" }: { className?: string }) {
+export function Logo({
+  className = "h-10 w-auto",
+}: {
+  className?: string;
+}) {
   return (
     <img
       src={logoAsset}

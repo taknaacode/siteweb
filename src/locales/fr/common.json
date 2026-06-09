@@ -1,0 +1,162 @@
+{
+  "hero": {
+    "badge": "Systèmes de Défense Autonomes",
+    "titleStart": "Intelligence Autonome pour la",
+    "titleHighlight": "Protection des Infrastructures Critiques",
+    "titleEnd": "",
+    "description": "Drones alimentés par l'IA et systèmes de surveillance intelligents conçus pour sécuriser les environnements les plus sensibles.",
+    "demoButton": "Demander une Démonstration",
+    "contactButton": "Contacter un Expert",
+    "scrollLabel": "Faire défiler vers les solutions"
+  },
+  "navbar": {
+    "solutions": "Solutions",
+    "industries": "Secteurs",
+    "technology": "Technologie",
+    "about": "À propos",
+    "contact": "Contact",
+    "requestDemo": "Demander une démo",
+    "toggleMenu": "Ouvrir le menu"
+  },"solutions": {
+  "eyebrow": "Nos Solutions",
+  "title": "Conçu pour les opérations <teal>critiques</teal>",
+  "description": "Une plateforme de surveillance autonome de bout en bout combinant drones intelligents, capteurs avancés, IA embarquée et tableaux de bord en temps réel pour sécuriser les actifs critiques, détecter les menaces instantanément et garantir la continuité des opérations.",
+  "learnMore": "En savoir plus",
+  "items": {
+    "drone": {
+      "title": "Drone de Surveillance IA",
+      "desc": "Patrouilles autonomes avec vision IA embarquée, détection d'anomalies et alertes en temps réel transmises à votre centre de contrôle."
+    },
+    "intrusion": {
+      "title": "Détection d'Intrusion",
+      "desc": "Classification des humains et véhicules, suivi de périmètre, fonctionnement en faible luminosité et modes de poursuite discrets."
+    },
+    "commandCenter": {
+      "title": "Centre de Commandement Intégré",
+      "desc": "Interface unique pour la gestion de flotte, la télémétrie en direct, la planification des missions et l'analyse post-incident."
+    }
+  }
+},
+"technology": {
+  "eyebrow": "Intelligence embarquée",
+  "title": "Chaque décision se prend <teal>à la source</teal>",
+  "description": "Les accélérateurs neuronaux embarqués fusionnent les données multi-spectrales et transmettent des informations exploitables directement aux opérateurs — en moins d'une seconde, avec ou sans connexion.",
+  "nodes": {
+    "drone": "Drone",
+    "edgeAI": "IA embarquée",
+    "commandCenter": "Centre de commandement",
+    "sensorFusion": "Fusion des capteurs"
+  },
+  "chips": {
+    "edgeAI": "IA embarquée",
+    "computerVision": "Vision par ordinateur",
+    "machineLearning": "Apprentissage automatique",
+    "thermalAnalytics": "Analyse thermique",
+    "sensorFusion": "Fusion des capteurs",
+    "autonomousNavigation": "Navigation autonome",
+    "predictiveMaintenance": "Maintenance prédictive"
+  }
+},
+"about": {
+  "eyebrow": "À propos de TaknaaCode",
+  "title": "Construire la couche de sécurité <teal>autonome</teal>",
+  "description": "TaknaaCode L.L.C — S.P.C est une entreprise technologique orientée innovation, spécialisée dans le développement de systèmes de surveillance autonome nouvelle génération. Nous combinons robotique aérienne, IA embarquée et logiciels pensés pour les opérateurs afin d'offrir aux organisations un contrôle en temps réel sur leurs environnements les plus critiques.",
+  "pillars": {
+    "mission": {
+      "title": "Mission",
+      "desc": "Protéger les infrastructures critiques grâce à l'intelligence autonome."
+    },
+    "vision": {
+      "title": "Vision",
+      "desc": "Un monde où chaque système essentiel est surveillé, sécurisé et capable d'alerter."
+    },
+    "innovation": {
+      "title": "Innovation",
+      "desc": "IA embarquée, vision par ordinateur et robotique développées en interne."
+    },
+    "safety": {
+      "title": "Sécurité",
+      "desc": "Une fiabilité de niveau défense intégrée dans chaque composant livré."
+    }
+  },
+  "stats": {
+    "operations": "Opérations",
+    "threats": "Types de menaces détectées",
+    "response": "Temps de réponse aux alertes",
+    "altitude": "Altitude opérationnelle"
+  }
+},
+"contact": {
+  "eyebrow": "Sécurisez votre infrastructure",
+  "title": "Déployons <teal>l'autonomie</teal> sur votre site",
+  "description": "Échangez avec notre équipe solutions au sujet des pilotes, des déploiements et de l'intégration avec votre centre opérationnel existant.",
+  "form": {
+    "fullName": "Nom complet",
+    "company": "Entreprise",
+    "email": "Email",
+    "phone": "Téléphone",
+    "industry": "Secteur",
+    "selectIndustry": "Sélectionner un secteur…",
+    "message": "Message",
+    "messagePlaceholder": "Parlez-nous de votre site, de son échelle et de votre calendrier.",
+    "send": "Envoyer la demande",
+    "received": "Demande reçue"
+  },
+  "industries": {
+    "oilGas": "Pétrole & Gaz",
+    "energyUtilities": "Énergie & Services publics",
+    "defense": "Défense",
+    "airports": "Aéroports",
+    "ports": "Ports",
+    "industrialFacilities": "Sites industriels",
+    "smartCities": "Villes intelligentes",
+    "other": "Autre"
+  },
+  "info": {
+    "email": "Email",
+    "address": "Adresse",
+    "addressValue": "Abu Dhabi, Émirats arabes unis",
+    "scheduleDemo": "Planifier une démo"
+  }
+},
+"footer": {
+  "social": "Réseau social",
+  "copyright": "© 2024 TaknaaCode L.L.C — S.P.C · Tous droits réservés.",
+  "tagline": "Conçu pour les opérations critiques.",
+  "columns": {
+    "solutions": {
+      "title": "Solutions",
+      "drone": "Drone de Surveillance IA",
+      "intrusion": "Détection d'Intrusion",
+      "commandCenter": "Centre de Commandement"
+    },
+    "industries": {
+      "title": "Secteurs",
+      "oilGas": "Pétrole & Gaz",
+      "energy": "Énergie & Services Publics"
+    },
+    "company": {
+      "title": "Entreprise",
+      "about": "À propos",
+      "technology": "Technologie",
+      "contact": "Contact",
+      "careers": "Carrières",
+      "press": "Presse"
+    }
+  }
+},
+"industries": {
+  "eyebrow": "Les secteurs que nous protégeons",
+  "title": "Une solution pensée pour les secteurs les plus <teal>exigeants</teal>",
+  "items": {
+    "oilGas": {
+      "name": "Pétrole & Gaz",
+      "desc": "Intégrité des pipelines, détection des fuites et surveillance des torchères."
+    },
+    "energyUtilities": {
+      "name": "Énergie & Services publics",
+      "desc": "Surveillance des sous-stations et inspection des lignes de transmission."
+    }
+  }
+}
+}

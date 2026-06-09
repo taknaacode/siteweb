@@ -1,0 +1,163 @@
+{
+  "hero": {
+    "badge": "Autonomous Defense Systems",
+    "titleStart": "Autonomous Intelligence for",
+    "titleHighlight": "Critical Infrastructure",
+    "titleEnd": "Protection",
+    "description": "AI-powered drones and intelligent monitoring systems designed to secure the world's most sensitive environments.",
+    "demoButton": "Request a Demo",
+    "contactButton": "Contact Sales",
+    "scrollLabel": "Scroll to solutions"
+  },
+  "navbar": {
+    "solutions": "Solutions",
+    "industries": "Industries",
+    "technology": "Technology",
+    "about": "About",
+    "contact": "Contact",
+    "requestDemo": "Request Demo",
+    "toggleMenu": "Toggle menu"
+  },
+  "solutions": {
+  "eyebrow": "Our Solutions",
+  "title": "Engineered for <teal>mission-critical</teal> operations",
+  "description": "An end-to-end autonomous surveillance platform combining intelligent drones, advanced sensors, embedded AI, and real-time monitoring dashboards to secure critical assets, detect threats instantly, and ensure uninterrupted operations.",
+  "learnMore": "Learn More",
+  "items": {
+    "drone": {
+      "title": "AI Surveillance Drone",
+      "desc": "Autonomous patrol routes with onboard AI vision, anomaly detection, and real-time alerts streamed to your command center."
+    },
+    "intrusion": {
+      "title": "Intrusion Detection",
+      "desc": "Human and vehicle classification with perimeter tracking, low-light operation, and silent pursuit modes."
+    },
+    "commandCenter": {
+      "title": "Integrated Command Center",
+      "desc": "Single pane of glass for fleet management, live telemetry, mission planning, and forensic analytics."
+    }
+  }
+},
+"technology": {
+  "eyebrow": "Embedded Intelligence",
+  "title": "Every decision happens at <teal>the edge</teal>",
+  "description": "Onboard neural accelerators fuse multi-spectral inputs and stream actionable intelligence directly to operators — sub-second response, with or without connectivity.",
+  "nodes": {
+    "drone": "Drone",
+    "edgeAI": "Edge AI",
+    "commandCenter": "Command Center",
+    "sensorFusion": "Sensor Fusion"
+  },
+  "chips": {
+    "edgeAI": "Edge AI",
+    "computerVision": "Computer Vision",
+    "machineLearning": "Machine Learning",
+    "thermalAnalytics": "Thermal Analytics",
+    "sensorFusion": "Sensor Fusion",
+    "autonomousNavigation": "Autonomous Navigation",
+    "predictiveMaintenance": "Predictive Maintenance"
+  }
+},
+"about": {
+  "eyebrow": "About TaknaaCode",
+  "title": "Building the <teal>autonomous</teal> security layer",
+  "description": "TaknaaCode L.L.C — S.P.C is an innovation-driven technology company developing next-generation autonomous surveillance systems. We combine aerial robotics, embedded AI, and operator-first software to give organizations real-time control over their most critical environments.",
+  "pillars": {
+    "mission": {
+      "title": "Mission",
+      "desc": "Protect critical infrastructure through autonomous intelligence."
+    },
+    "vision": {
+      "title": "Vision",
+      "desc": "A world where every essential system is monitored, secured, and self-aware."
+    },
+    "innovation": {
+      "title": "Innovation",
+      "desc": "Edge AI, computer vision, and robotics engineered in-house."
+    },
+    "safety": {
+      "title": "Safety",
+      "desc": "Defense-grade reliability built into every component we ship."
+    }
+  },
+  "stats": {
+    "operations": "Operations",
+    "threats": "Threat Types Detected",
+    "response": "Alert Response Time",
+    "altitude": "Operations Altitude"
+  }
+},
+"contact": {
+  "eyebrow": "Secure Your Infrastructure",
+  "title": "Let's deploy <teal>autonomy</teal> at your site",
+  "description": "Talk to our solutions team about pilots, deployments, and integration with your existing operations center.",
+  "form": {
+    "fullName": "Full Name",
+    "company": "Company",
+    "email": "Email",
+    "phone": "Phone",
+    "industry": "Industry",
+    "selectIndustry": "Select industry…",
+    "message": "Message",
+    "messagePlaceholder": "Tell us about your site, scale, and timeline.",
+    "send": "Send Request",
+    "received": "Request received"
+  },
+  "industries": {
+    "oilGas": "Oil & Gas",
+    "energyUtilities": "Energy & Utilities",
+    "defense": "Defense",
+    "airports": "Airports",
+    "ports": "Ports",
+    "industrialFacilities": "Industrial Facilities",
+    "smartCities": "Smart Cities",
+    "other": "Other"
+  },
+  "info": {
+    "email": "Email",
+    "address": "Address",
+    "addressValue": "Abu Dhabi, UAE",
+    "scheduleDemo": "Schedule a Demo"
+  }
+},
+"footer": {
+  "social": "Social link",
+  "copyright": "© 2024 TaknaaCode L.L.C — S.P.C · All rights reserved.",
+  "tagline": "Engineered for mission-critical operations.",
+  "columns": {
+    "solutions": {
+      "title": "Solutions",
+      "drone": "AI Surveillance Drone",
+      "intrusion": "Intrusion Detection",
+      "commandCenter": "Command Center"
+    },
+    "industries": {
+      "title": "Industries",
+      "oilGas": "Oil & Gas",
+      "energy": "Energy & Utilities"
+    },
+    "company": {
+      "title": "Company",
+      "about": "About",
+      "technology": "Technology",
+      "contact": "Contact",
+      "careers": "Careers",
+      "press": "Press"
+    }
+  }
+},
+"industries": {
+  "eyebrow": "Who We Protect",
+  "title": "Trusted across the most <teal>demanding</teal> sectors",
+  "items": {
+    "oilGas": {
+      "name": "Oil & Gas",
+      "desc": "Pipeline integrity, leak detection, and flare monitoring."
+    },
+    "energyUtilities": {
+      "name": "Energy & Utilities",
+      "desc": "Substation surveillance and transmission inspection."
+    }
+  }
+}
+}

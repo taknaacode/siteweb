@@ -4,9 +4,16 @@ import droneImg from "@/assets/stealth-drone.png";
 export function Drone() {
   return (
     <motion.div
-      className="relative mx-auto w-full max-w-3xl"
-      animate={{ y: [0, -14, 0] }}
-      transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+      className="relative mx-auto w-full max-w-6xl"
+      animate={{ y: [0, -50, 0, 30, 0],
+                 rotateZ: [0, 4, 0, -4, 0],
+                 rotateY: [0, 3, 0, -3, 0],
+      }}
+      transition={{
+      duration: 8,
+      repeat: Infinity,
+      ease: "easeInOut",
+      }}
     >
       <div
         className="absolute inset-0 -z-10 animate-pulse-glow blur-3xl"
