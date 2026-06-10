@@ -6,6 +6,18 @@ import { SectionHeader } from "./Section";
 import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
 
+// Type global pour le widget Calendly injecté via CDN
+declare global {
+  interface Window {
+    Calendly?: {
+      initPopupWidget: (opts: { url: string }) => void;
+    };
+  }
+}
+
+// ← Défini dans .env.local : VITE_CALENDLY_URL=https://calendly.com/ton-lien
+const CALENDLY_URL = import.meta.env.VITE_CALENDLY_URL as string;
+
 const industries = [
   "contact.industries.oilGas",
   "contact.industries.energyUtilities",
@@ -149,6 +161,10 @@ export function Contact() {
 
             <a
               href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                window.Calendly?.initPopupWidget({ url: CALENDLY_URL });
+              }}
               className="mt-2 inline-flex items-center justify-center gap-2 rounded-md border border-teal/60 px-5 py-3 text-sm font-medium text-foreground transition hover:bg-teal/10"
             >
               <CalendarClock className="h-4 w-4 text-teal" />

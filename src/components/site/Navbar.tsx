@@ -4,6 +4,13 @@ import { Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
+const CALENDLY_URL = import.meta.env.VITE_CALENDLY_URL as string;
+
+function openCalendly(e: React.MouseEvent) {
+  e.preventDefault();
+  window.Calendly?.initPopupWidget({ url: CALENDLY_URL });
+}
+
 const links = [
   { href: "#solutions", key: "navbar.solutions" },
   { href: "#industries", key: "navbar.industries" },
@@ -55,7 +62,8 @@ export function Navbar() {
           <LanguageSwitcher />
 
           <a
-            href="#contact"
+            href="#"
+            onClick={openCalendly}
             className="rounded-md bg-teal px-4 py-2 text-sm font-medium text-primary-foreground transition-all hover:opacity-90 hover:teal-glow"
           >
             {t("navbar.requestDemo")}
@@ -92,8 +100,8 @@ export function Navbar() {
 
             <li>
               <a
-                href="#contact"
-                onClick={() => setOpen(false)}
+                href="#"
+                onClick={(e) => { openCalendly(e); setOpen(false); }}
                 className="mt-2 inline-block rounded-md bg-teal px-4 py-2 text-center text-sm font-medium text-primary-foreground"
               >
                 {t("navbar.requestDemo")}
