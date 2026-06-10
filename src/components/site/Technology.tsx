@@ -39,7 +39,7 @@ export function Technology() {
 
         <div className="glass rounded-2xl p-6 sm:p-10">
           <div className="relative">
-            <div className="grid grid-cols-2 gap-y-10 sm:grid-cols-5 sm:gap-y-0 sm:gap-x-4 items-center">
+            <div className="grid grid-cols-2 gap-y-10 sm:grid-cols-4 sm:gap-y-0 sm:gap-x-4 items-center">
               {nodes.map((n, i) => (
                 <motion.div
                   key={n.labelKey}
@@ -68,7 +68,7 @@ export function Technology() {
               aria-hidden
             >
               <line
-                x1="10%" y1="1" x2="90%" y2="1"
+                x1="12.5%" y1="1" x2="87.5%" y2="1"
                 stroke="#508176"
                 strokeWidth="2"
                 strokeDasharray="8 8"

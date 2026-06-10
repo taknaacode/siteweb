@@ -4,16 +4,31 @@ import { ArrowRight, ChevronDown } from "lucide-react";
 import { Particles } from "./Particles";
 import { Drone } from "./Drone";
 
+const CALENDLY_URL = import.meta.env.VITE_CALENDLY_URL as string;
+
 export function Hero() {
   const { t } = useTranslation();
 
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const openCalendly = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    (window as any).Calendly?.initPopupWidget({ url: CALENDLY_URL });
+  };
+
   return (
     <section id="top" className="relative h-screen overflow-hidden pt-10 pb-0">
-      <div className="absolute inset-0 grid-bg opacity-60" />
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 grid-bg opacity-60 pointer-events-none" />
+      <div className="absolute inset-0 pointer-events-none">
         <Particles />
       </div>
-      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-background" />
+      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-background pointer-events-none" />
 
       <div className="relative mx-auto flex h-full max-w-7xl flex-col items-center px-6 pt-20 text-center">
         <motion.span
@@ -53,7 +68,8 @@ export function Hero() {
           className="mt-4 flex flex-col gap-2 sm:flex-row"
         >
           <a
-            href="#contact"
+            href="#"
+            onClick={openCalendly}
             className="group inline-flex items-center justify-center gap-2 rounded-md bg-teal px-5 py-2 text-xs font-medium text-primary-foreground transition-all hover:teal-glow"
           >
             {t("hero.demoButton")}
@@ -62,18 +78,20 @@ export function Hero() {
 
           <a
             href="#contact"
+            onClick={(e) => handleScroll(e, "contact")}
             className="inline-flex items-center justify-center rounded-md border border-teal/70 px-5 py-2 text-xs font-medium text-foreground transition-colors hover:bg-teal/10"
           >
             {t("hero.contactButton")}
           </a>
         </motion.div>
 
-        <div className="mt-8 sm:-mt-16 md:-mt-32 w-[90%] sm:w-full flex justify-center">
+        <div className="mt-8 sm:-mt-16 md:-mt-32 w-[90%] sm:w-full flex justify-center pointer-events-none">
           <Drone />
         </div>
 
         <motion.a
           href="#solutions"
+          onClick={(e) => handleScroll(e, "solutions")}
           aria-label={t("hero.scrollLabel")}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, y: [0, 8, 0] }}

@@ -24,6 +24,15 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const id = href.replace("#", "");
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     onScroll();
@@ -38,7 +47,7 @@ export function Navbar() {
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <a href="#top" className="flex items-center gap-3">
+        <a href="#top" onClick={(e) => handleScroll(e, "#top")} className="flex items-center gap-3">
           <Logo className="h-16 w-auto" />
           <span className="hidden text-sm font-semibold tracking-widest text-foreground sm:block">
             TAKNAACODE
@@ -50,6 +59,7 @@ export function Navbar() {
             <li key={l.href}>
               <a
                 href={l.href}
+                onClick={(e) => handleScroll(e, l.href)}
                 className="text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 {t(l.key)}
@@ -86,7 +96,10 @@ export function Navbar() {
               <li key={l.href}>
                 <a
                   href={l.href}
-                  onClick={() => setOpen(false)}
+                  onClick={(e) => {
+                    handleScroll(e, l.href);
+                    setOpen(false);
+                  }}
                   className="text-foreground text-base"
                 >
                   {t(l.key)}
