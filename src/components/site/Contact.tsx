@@ -3,6 +3,8 @@ import { useTranslation, Trans } from "react-i18next";
 import { motion } from "framer-motion";
 import { Mail, MapPin, CalendarClock, Send, Check } from "lucide-react";
 import { SectionHeader } from "./Section";
+import emailjs from "@emailjs/browser";
+import { toast } from "sonner";
 
 const industries = [
   "contact.industries.oilGas",
@@ -19,10 +21,39 @@ export function Contact() {
   const { t } = useTranslation();
   const [sent, setSent] = useState(false);
 
-  const onSubmit = (e: FormEvent) => {
+  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSent(true);
-    setTimeout(() => setSent(false), 4000);
+
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      toast.error("Configuration d'EmailJS manquante.");
+      console.error("Veuillez configurer les variables VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID et VITE_EMAILJS_PUBLIC_KEY dans votre fichier .env.local");
+      return;
+    }
+
+    const promise = emailjs.sendForm(
+      serviceId,
+      templateId,
+      e.currentTarget,
+      publicKey
+    );
+
+    toast.promise(promise, {
+      loading: "Envoi en cours...",
+      success: () => {
+        setSent(true);
+        setTimeout(() => setSent(false), 4000);
+        (e.target as HTMLFormElement).reset();
+        return "Message envoyé avec succès !";
+      },
+      error: (err) => {
+        console.error("EmailJS Error:", err);
+        return "Erreur lors de l'envoi du message.";
+      },
+    });
   };
 
   return (
@@ -59,6 +90,7 @@ export function Contact() {
                   {t("contact.form.industry")}
                 </label>
                 <select
+                  name="industry"
                   required
                   defaultValue=""
                   className="w-full rounded-md border border-border bg-background/60 px-4 py-3 text-sm text-foreground outline-none transition focus:border-teal"
@@ -79,6 +111,7 @@ export function Contact() {
                   {t("contact.form.message")}
                 </label>
                 <textarea
+                  name="message"
                   required
                   rows={5}
                   placeholder={t("contact.form.messagePlaceholder")}
