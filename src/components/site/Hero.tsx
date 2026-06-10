@@ -68,7 +68,7 @@ export function Hero() {
           </a>
         </motion.div>
 
-        <div className="-mt-32 w-full flex justify-center">
+        <div className="mt-8 sm:-mt-16 md:-mt-32 w-[90%] sm:w-full flex justify-center">
           <Drone />
         </div>
 
@@ -78,7 +78,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, y: [0, 8, 0] }}
           transition={{ delay: 1, duration: 2, repeat: Infinity }}
-          className="-mt-4 text-teal-soft"
+          className="absolute bottom-6 left-1/2 -translate-x-1/2 text-teal-soft"
         >
           <ChevronDown className="h-6 w-6" />
         </motion.a>
